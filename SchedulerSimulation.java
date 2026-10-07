@@ -29,15 +29,23 @@ class Process implements Runnable {
     private int burstTime; // Total time the process requires to complete (in milliseconds)
     private int timeQuantum; // Time slice (time quantum) allowed per CPU access (in milliseconds)
     private int remainingTime; // Time left for the process to finish its execution
+<<<<<<< HEAD
     private int pirority;//Priority level of the process 
 
+=======
+   
+>>>>>>> 48d5f68 (Set my student ID: 446050922)
     // Constructor to initialize the process with name, burst time, and time quantum
     public Process(String name, int burstTime, int timeQuantum) {
         this.name = name;
         this.burstTime = burstTime;
         this.timeQuantum = timeQuantum;
         this.remainingTime = burstTime; // Initially, remaining time is equal to the burst time
+<<<<<<< HEAD
         this.priority=priority; //Set the process priority 
+=======
+        
+>>>>>>> 48d5f68 (Set my student ID: 446050922)
     }
     //Getter method for process priority
     public int getPriority(){
