@@ -41,7 +41,7 @@ class Process implements Runnable {
    
     
         
-    // This method will be called when the thread for this process is started
+    
     @Override
     public void run() {
         // Simulate running for either the time quantum or remaining time, whichever is smaller
