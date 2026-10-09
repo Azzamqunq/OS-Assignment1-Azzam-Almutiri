@@ -29,11 +29,11 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Write your full name here] |
-| **Student ID** | [Write your student ID here] |
-| **University Email** | [yourid]@std.psau.edu.sa |
-| **GitHub Username** | [your-github-username] |
-| **Repository Link** | [Paste your repository link here] |
+| **Full Name** | [azzam mishal hamid almutiri] |
+| **Student ID** | [446050922] |
+| **University Email** | [446050922@std.psau.edu.sa |
+| **GitHub Username** | [Azzamqunq] |
+| **Repository Link** | [https://github.com/Azzamqunq/OS-Assignment1-Azzam-Almutiri.git] |
  
 ---
 
@@ -129,68 +129,120 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
-**What I did**:
+### Entry 1 - [October 7, 2026, 5 AM]
+**What I did**:Set up my GitHub repository and prepared the starter code.
 
 **Details**:
+- Read the README.md file to understand the assignment requirements.
+- Create Github Account using university email
+- Forked the the starter repository on GitHub.
+- Updated my student ID in SchedulerSimulation.java.
+- Cleaned up the starter code.
+- Removed merge conflict markers
+- run the program successfully
 
-**Challenges**:
+**Challenges**:I needed to understand the repository setup and check the starter code before implementing the new features.
 
-**Solution**:
 
-**Time spent**:
+**Solution**:I followed the assignment instructions and reviewed the project files before continuing.
+
+**Time spent**:3 hours
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**:
+### Entry 2 - [October 7, 2026, 4 PM]
+**What I did**:I implemented Feature 1 by adding a priority field to the Process class.
 
 **Details**:
+- Added a new int priority attribute inside the Process class to support priority-based scheduling.
+- Updated the constructor so each process receives a priority value when created.
+- Modified the output formatting to display the priority next to each process, making the simulation clearer.
+- Re-ran the program to verify that the priority values were stored correctly and printed in the output.
+- Committed the changes to GitHub with the message: “Feature 1: Added priority field to Process class”.
 
 **Challenges**:
+- At first, I wasn’t sure where the priority should be initialized because the constructor already had several parameters.
+- I had to make sure adding the new field didn’t break the existing simulation flow.
+- Understanding how priority might affect future scheduling logic required careful reading of the code.
 
 **Solution**:
+- Reviewed the constructor and traced how each parameter was used to ensure adding priority wouldn’t cause errors.
+- Added print statements to confirm the priority was being passed correctly.
+- Re-ran the simulation multiple times to ensure the output was consistent.
 
-**Time spent**:
+**Time spent**:3 hours
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**:
+### Entry 3 - [October 8, 2026, 6 AM]
+**What I did**:I implemented Feature 2 by adding a context switch counter to the scheduler.
 
 **Details**:
+- Added a static int contextSwitches variable inside SchedulerSimulation to track how many times the CPU switches between processes.
+- Incremented the counter right before starting a new thread, which reflects a real context switch.
+- Printed the total number of context switches at the end of the simulation for better visibility.
+- Tested the program with different burst times to see how the counter changed depending on process behavior.
+- Committed the update with the message: “Feature 2: Implemented context switch counter”.
 
 **Challenges**:
+- I had to determine the correct place to increment the counter so it accurately reflects a context switch.
+- Some parts of the code start threads indirectly, so I needed to trace the flow carefully.
+- Ensuring the counter didn’t increment during non-scheduling operations required attention.
 
 **Solution**:
+- Followed the scheduler loop step-by-step to identify the exact moment a new process begins running.
+- Used temporary print statements to confirm the counter increased only when expected.
+- Re-ran the simulation several times to validate the final count.
 
-**Time spent**:
+**Time spent**:3 and half hours 
 
 ---
 
-### Entry 4 - [Date and Time]
-**What I did**:
+### Entry 4 - [October 9, 2026, 7 AM]
+**What I did**:I implemented Feature 3 by adding waiting time tracking and generating a summary table.
 
 **Details**:
+• Added a waitingTime variable to each process to track how long it stays in the ready queue.
+• Updated the scheduler logic so the waiting time increases whenever a process is not running during a cycle.
+• Created a summary table printed at the end of the simulation showing each process’s burst time, arrival time, and total waiting time.
+• Tested the feature using processes with different burst times to ensure the waiting time calculation was accurate.
+• Committed the feature with the message: “Feature 3: Added waiting time tracking and summary”.
 
 **Challenges**:
+- Understanding exactly when waiting time should increase required careful reading of the scheduling loop.
+- I had to avoid double-counting waiting time when processes were re-queued.
+- Formatting the summary table so it looked clean and readable took some trial and error.
 
 **Solution**:
+- Added print statements inside the ready queue loop to verify when each process was waiting.
+- Compared the waiting time values with the expected behavior based on the time quantum.
+- Adjusted the summary formatting until the output was clear and aligned.
 
-**Time spent**:
+**Time spent**: 4 hours
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**:
+### Entry 5 - [October 10, 2026, 12 AM]
+**What I did**: reviewed all the implemented features and started writing the documentation in MY_WORK.md.
 
 **Details**:
+- Re-ran the full simulation to verify that all three features (priority, context switches, and waiting time tracking) were working correctly and producing consistent output.
+- Checked the commit history to make sure each feature had its own commit and that the dates matched the development log.
+- Cleaned up a few comments in the code to make the logic clearer for the video explanation.
+- Started filling out the reflection and technical answers sections, using real examples from my output to make the answers accurate.
+- Tested the program again after writing the documentation to ensure nothing broke during the final edits.
 
 **Challenges**:
+- Making sure the development log entries matched the actual commit dates required going back and checking the GitHub history.
+- Writing the reflection in my own words took time because I wanted it to be clear and connected to what I actually did.
+- Ensuring the waiting time summary table looked clean in the output required a small formatting adjustment.
 
 **Solution**:
+- Compared the timestamps in GitHub with the dates in my log to keep everything consistent.
+- Re-read the README instructions to make sure my documentation followed the required structure.
+- Ran the simulation multiple times to confirm the final output before recording the video.
 
-**Time spent**:
+**Time spent**: 3 hours
 
 ---
 
@@ -211,13 +263,16 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: [4 days]
 
 **Most challenging part**:
+The hardest part was adding the waiting-time tracking feature because it needed careful following of the scheduler loop. I had to make sure the waiting time only went up when a process was waiting in line, not when it was running. It also took time to prevent counting the time twice and to check the values by testing many times.
 
 **Most interesting learning**:
+the most interesting part was seeing how multithreading works in practice, especially how threads switch between states during Round-Robin scheduling. Watching the output change depending on burst time and time quantum helped me understand how real operating systems manage CPU time. I also enjoyed building the summary table because it made the results easier to interpret.
 
 **What I would do differently next time**:
+
 
 ---
 
@@ -237,7 +292,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[During this assignment, I learned how threads allow different parts of a program to run independently without blocking each other. I understood how Thread.start() begins the execution of a process and how Thread.join() forces the main thread to wait until the process finishes. Using Thread.sleep() helped me see how the program simulates real CPU work by pausing the thread for a short time. I also noticed how fast threads switch between states, especially when the scheduler moves from one process to another. Watching the output made it easier to understand how Round-Robin scheduling works with threads. Overall, I learned how threads make programs more responsive and how they help simulate real operating-system behavior.]
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -245,7 +300,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[The most challenging part for me was implementing the waiting time feature because it required tracking exactly when each process was waiting in the ready queue. I had to follow the scheduler loop carefully to understand when a process was running and when it was not. It was also difficult to avoid counting waiting time twice when a process was re-queued multiple times. Another challenge was making sure the summary table showed correct values that matched the actual behavior of the simulation. This part took a lot of testing and re-running the program to confirm the logic was correct.]
 
 ## Question 3: How did you overcome the challenges you faced?
 
@@ -253,7 +308,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[To overcome these challenges, I added several print statements inside the scheduler loop to see when each process entered or left the ready queue. I re-read the README and the code multiple times to make sure I understood the expected behavior. I also tested the program with different burst times to see how the waiting time changed in each case. Whenever something looked wrong, I adjusted the logic and ran the simulation again until the output made sense. This step-by-step debugging helped me understand the scheduler more clearly and fix the mistakes.]
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -261,7 +316,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[Multithreading is used in many real-world applications, like web browsers where each tab runs independently without freezing the whole program. It also appears in mobile apps, where background tasks such as downloading files run while the user continues using the app. Operating systems rely heavily on threads to manage multiple running programs and share CPU time fairly. The concepts I learned in this assignment, like context switching and time slicing, are similar to how modern systems keep applications responsive. Understanding these ideas helps me see how performance and user experience depend on efficient thread management.]
 
 ### Optional: What would you like to learn more about?
 
@@ -287,13 +342,14 @@
 
 ## Question 1: Thread vs Process
 
-**Question**: Explain the difference between a **thread** and a **process**. Why did we use threads in this assignment instead of creating separate processes? Mention at least **TWO** specific differences (e.g., memory sharing, creation overhead, communication speed), and reference relevant parts of `SchedulerSimulation.java`.
+**Question**: Explain the difference between a **thread** and a **process** Why did we use threads in this assignment instead of creating separate processes? Mention at least **TWO** specific differences (e.g., memory sharing, creation overhead, communication speed), and reference relevant parts of `SchedulerSimulation.java`.
 
 > 💡 **TIP:** Note that the class named `Process` in our code is a *simulated* process, and it is run by a real Java *thread*. Explain that distinction and point to the `new Thread(process)` line in `addProcessToQueue()`.
 
 **Your Answer:** *(3-5 sentences)*
+A process is a program that has its own memory space, while a thread is a smaller unit of execution that shares memory with other threads inside the same process Threads are faster to create and communicate with each other because they use the same memory In this assignment the Process class is only a simulation, and each one is actually executed by a real Java thread This is shown in addProcessToQueue() where the code creates a thread using new Thread(process)  Using threads instead of real processes makes the simulation simpler and avoids the heavy cost of creating multiple operating-system processes. 
 
-[Write your answer here.]
+
 
 ## Question 2: Ready Queue Behavior
 
@@ -305,10 +361,20 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+in Round-Robin scheduling, when a process does not finish within its time quantum, it gets placed back into the ready queue so other processes can run. In my output, process P10 had a long burst time, so it was re‑queued two times before it finally finished. Each time the quantum ended, the scheduler printed that P3 did not finish and added it back to the ready queue. This re‑queueing makes the scheduling fair because it prevents P10 from taking the CPU for too long and allows other processes to get their turn. It also keeps the system responsive since no single process can block the rest
 
 Example from my output:
-```
+
+P10 executing quantum [5000ms] 
+  ⚡ Quantum progress: [███████████████] 100%
+  ⏸ P10 completed quantum 5000ms │ Overall progress: [██████████████████░░] 91%
+     Remaining time: 889ms
+  ↻ P10 yields CPU for context switch
+
+  ➕ P10 (Priority: 2) added to ready queue │ Burst time: 10889ms
+┌─ Ready Queue ─────────────────────────────────────────────────────────────────
+│ [P3 → P9 → P10] 
+
 [Paste a relevant snippet from your program output here showing a process being re-queued]
 ```
 
@@ -325,13 +391,23 @@ Example from my output:
 
 1. **New**: [When is P1 in the New state?]
 
+P1 is in the New state right after it is created inside addProcessToQueue() using new Thread(process). At this moment, the thread object exists but has not started running yet.
+
 2. **Runnable**: [When does P1 become Runnable?]
+
+P1 becomes Runnable when the scheduler selects it and calls thread.start(). This makes the thread ready to run whenever the CPU gives it time.
 
 3. **Running**: [When is P1 Running?]
 
+P1 enters the Running state when its run() method begins executing. This is where the process starts consuming its burst time and prints its quantum progress.
+
 4. **Waiting**: [When and why would a thread be Waiting?]
 
+P1 enters the Waiting state when Thread.sleep() is called inside the run() method. The sleep simulates CPU work by pausing the thread for the duration of the quantum.
+
 5. **Terminated**: [When is P1 Terminated?]
+
+P1 reaches the Terminated state after finishing its burst time and completing the run() method. The main thread confirms this by calling thread.join() to wait until P1 fully finishes.
 
 ## Question 4: Real-World Applications
 
@@ -341,32 +417,36 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences per example)*
 
-### Example 1 (operating-system level): [Name of scenario]
+
+### Example 1 ((Operating System Scheduler): [Name of scenario]
 
 **Description**:
-[Describe the real-world scenario.]
+[Operating systems use Round-Robin scheduling to share CPU time among multiple running programs. Each program acts like a process, and the OS gives each one a small time slice before switching to the next.]
 
 **Why Round-Robin works well here**:
 [Fairness, responsiveness, predictability?]
 
-### Example 2: [Name of application/scenario]
+It ensures fairness because every program gets equal CPU time. It also keeps the system responsive since no single program can freeze the entire machine. The time quantum and context switching work exactly like the simulation in my assignment.
+
+### Example 2: [Game Engine Tasks/scenario]
 
 **Description**:
-[Describe the real-world scenario or application.]
+[Game engines run several tasks at the same time, such as physics updates, AI logic, and rendering frames. Each task needs regular CPU time to keep the game smooth.]
 
 **Why Round-Robin works well here**:
 [Fairness, responsiveness, predictability?]
 
+It prevents any single task from dominating the CPU and slowing the game. The time quantum acts like a frame update, and switching between tasks keeps gameplay responsive. This is similar to how my scheduler moved between processes in the simulation.
 ## Summary
 
 **Key concepts I understood through these questions:**
-1.
-2.
-3.
+1.How Round-Robin scheduling re-queues processes for fairness
+2.How threads move through their lifecycle states
+3.How context switching affects responsiveness
 
 **Concepts I need to study more:**
-1.
-2.
+1.Synchronization between threads
+2.More advanced scheduling algorithms
 
 ---
 
